@@ -35,3 +35,9 @@ section,
 footer {
   padding: 20px 0;
 }
+
+@media (max-width: 992px) {
+  .nama {
+    font-size: smaller;
+  }
+}
