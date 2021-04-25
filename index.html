@@ -20,7 +20,7 @@
     <nav class="blue darken-2">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#home" class="brand-logo nama">Syarif Ramadhan</a>
+          <a href="#home" class="brand-logo nama">Syarif</a>
           <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#about">Tentang Saya</a></li>
@@ -248,7 +248,9 @@
                 <textarea name="pesan" id="pesan" class="materialize-textarea" style="height: 175px;"></textarea>
                 <label for="pesan">Pesan</label>
               </div>
-              <button type="submit" class="btn blue darken-2">Kirim</button>
+              <button class="btn waves-effect waves-light btn-kirim" type="submit" name="action">Kirim
+                <i class="material-icons right">send</i>
+              </button>
             </div>
           </form>
         </div>
@@ -288,6 +290,7 @@
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbycW6K93RIm58S7D236TKlQP8zVvRtzY7lPzPm-Lz_8yFtXbg9XJaq2cRxeIWBvgNsk/exec';
   const form = document.forms['portfolio-form'];
+  const btnKirim = document.querySelector('.btn-kirim');
 
   form.addEventListener('submit', e => {
     e.preventDefault()
