@@ -229,7 +229,7 @@
         </div>
 
         <div class="col m7 s12">
-          <form>
+          <form name="portfolio-form">
             <div class="card-panel">
               
               <div class="input-field">
@@ -285,6 +285,16 @@
     M.ScrollSpy.init(scroll, {
       scrollOffset: 50
     });
+
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbycW6K93RIm58S7D236TKlQP8zVvRtzY7lPzPm-Lz_8yFtXbg9XJaq2cRxeIWBvgNsk/exec>'
+  const form = document.forms['portfolio-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 
   </script>
 </body>
