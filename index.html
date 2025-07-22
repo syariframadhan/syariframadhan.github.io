@@ -85,6 +85,18 @@
           <h5 class="light grey-text text-darken-3">Syarif Ramadhan</h5>
           <p style="font-size: larger;">
             Saya lahir di Bogor, 3 September 1997. Sebagai anak pertama dalam keluarga. Saya memulai karir sebagai buruh pabrik di Industri Makanan. Bagaimanapun, Saya tetap memiliki keinginan menjadi Programmer. Saya mulai kuliah pada tahun 2016. Ini berpengaruh sangat besar pada kehidupan saya. Selama itu, Saya juga telah bekerja sebagai IT Support di Industri Elektronik di Bogor. Saya telah lulus dan sedang mencari pekerjaan sebagai Programmer.</p>
+            <h2 id="nama-tamu">Tamu Undangan</h2>
+
+  <script>
+    // Ambil query string dari URL
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get('to');
+
+    // Tampilkan nama jika tersedia
+    if (nama) {
+      document.getElementById('nama-tamu').textContent = decodeURIComponent(nama);
+    }
+  </script>
         </div>
         <div class="col m6 ligth">
           <h4 class="center light grey-text text-darken-3">Front End Development</h4>
