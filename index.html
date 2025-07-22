@@ -248,7 +248,34 @@
                 <textarea name="pesan" id="pesan" class="materialize-textarea" style="height: 175px;"></textarea>
                 <label for="pesan">Pesan</label>
               </div>
-              <button onClick="alert('Terima kasih telah menghubungi saya')" class="btn waves-effect waves-light" type="submit" name="action">Kirim
+              <button 
+              onClick="alert('Terima kasih telah menghubungi saya')" 
+
+              // ID atau kelas text box (contoh)
+            const namaTextBox = document.getElementById("nama");
+            const emailTextBox = document.getElementById("email");
+            const phoneTextBox = document.getElementById("phone");
+            const pesanTextBox = document.getElementById("pesan");
+
+                        
+            // Elemen pop-up (contoh)
+            const popUpElement = document.getElementById("popUp");
+                        
+            // Fungsi untuk mengosongkan text box
+            function kosongkanTextBoxes() {
+              namaTextBox.value = "";
+              emailTextBox.value = "";
+              phoneTextBox.value = "";
+              pesanTextBox.value = "";              
+            }
+            
+            // Event listener untuk pop-up
+            popUpElement.addEventListener("click", function() {
+              kosongkanTextBoxes();
+            });
+              
+              
+              class="btn waves-effect waves-light" type="submit" name="action">Kirim
                 <i class="material-icons right">send</i>
               </button>
               
